@@ -28,12 +28,10 @@ class MyHomePage extends StatelessWidget {
         title: Text('Facebook'),
         centerTitle: true,
       ),
-      body:  Center(
-        child: Container(
-          height: 200,
-          width: 300,
-          color: Colors.red,
-        ),
+      body:  Container(
+        height: 200,
+        width: 300,
+        color: Colors.red,
       ),
     );
   }
