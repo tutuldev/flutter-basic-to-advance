@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 void main()=> runApp(MyApp());
 
 class MyApp extends StatelessWidget{
-
   @override
   Widget build(BuildContext context) {
     // throw UnimplementedError();
@@ -32,12 +31,22 @@ class MyHomePage extends StatelessWidget {
       body:  Container(
         // margin: EdgeInsets.all(24),
         // margin: EdgeInsets.fromLTRB(10,12,20,20),
-        margin: EdgeInsets.symmetric(vertical: 20,horizontal: 30),
-        padding: EdgeInsets.all(24),
+        margin: const EdgeInsets.symmetric(vertical: 20,horizontal: 30),
+        padding: const EdgeInsets.all(24),
+        decoration: BoxDecoration(
+          borderRadius: const  BorderRadius.all(
+              Radius.circular(50)
+          ),
+
+          color: Colors.red,
+            border: Border.all(width: 3,
+            color:Colors.black
+        )),
+        //decoration use korle color use kora jabe na baire theke
         height: 200,
         width: 300,
-        color: Colors.red,
-        child: const Center(child: Text("Red Container",style: TextStyle(fontSize: 24),)),
+        // color: Colors.red,
+        child: const  Text("Red Container",style: TextStyle(fontSize: 24),),
       ),
     );
   }
