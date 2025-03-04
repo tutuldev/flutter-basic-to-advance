@@ -28,25 +28,32 @@ class MyHomePage extends StatelessWidget {
         title: Text('Facebook'),
         centerTitle: true,
       ),
-      body:  Container(
-        // margin: EdgeInsets.all(24),
-        // margin: EdgeInsets.fromLTRB(10,12,20,20),
-        margin: const EdgeInsets.symmetric(vertical: 20,horizontal: 30),
-        padding: const EdgeInsets.all(24),
-        decoration: BoxDecoration(
-          borderRadius: const  BorderRadius.all(
-              Radius.circular(50)
+      body:  Column(
+        // mainAxisAlignment: MainAxisAlignment.start,  // default
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.end,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // crossAxisAlignment: CrossAxisAlignment.start, //default
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget> [
+          Container(
+            height: 100,
+            // width: 200,
+            color: Colors.deepPurple.shade700,
           ),
-
-          color: Colors.red,
-            border: Border.all(width: 3,
-            color:Colors.black
-        )),
-        //decoration use korle color use kora jabe na baire theke
-        height: 200,
-        width: 300,
-        // color: Colors.red,
-        child: const  Text("Red Container",style: TextStyle(fontSize: 24),),
+          Container(
+            height: 100,
+            width: 200,
+            color: Colors.deepPurple[400],
+          ),
+          Container(
+            height: 100,
+            width: 200,
+            color: Colors.deepPurple[200],
+          ),
+        ],
       ),
     );
   }
