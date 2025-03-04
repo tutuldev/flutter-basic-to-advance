@@ -28,29 +28,30 @@ class MyHomePage extends StatelessWidget {
         title: Text('Facebook'),
         centerTitle: true,
       ),
-      body:  Column(
+      body:  Row(
         // mainAxisAlignment: MainAxisAlignment.start,  // default
         // mainAxisAlignment: MainAxisAlignment.center,
         // mainAxisAlignment: MainAxisAlignment.end,
         // mainAxisAlignment: MainAxisAlignment.spaceAround,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         // crossAxisAlignment: CrossAxisAlignment.start, //default
         // crossAxisAlignment: CrossAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.end,
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget> [
           Container(
-            height: 100,
-            // width: 200,
+            // height: 100,
+            width: 100,
             color: Colors.deepPurple.shade700,
           ),
           Container(
             height: 100,
-            width: 200,
+            width: 100,
             color: Colors.deepPurple[400],
           ),
           Container(
             height: 100,
-            width: 200,
+            width: 100,
             color: Colors.deepPurple[200],
           ),
         ],
