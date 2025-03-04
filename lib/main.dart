@@ -28,16 +28,19 @@ class MyHomePage extends StatelessWidget {
         title: Text('Facebook'),
         centerTitle: true,
       ),
-      body:  Column(
-        children: [
-          for(var i=0; i<50; i++)
-            Container(
-              margin: const EdgeInsets.all(12),
-              height: 100,
-              color: Colors.amber,
-              child: Center(child: Text("$i",style: TextStyle(fontSize: 30),),),
-            )
-        ],
+      body:  SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            for(var i=0; i<50; i++)
+              Container(
+                margin: const EdgeInsets.all(12),
+                height: 100,
+                color: Colors.amber,
+                child: Center(child: Text("$i",style: TextStyle(fontSize: 30),),),
+              )
+          ],
+        ),
       )
     );
   }
