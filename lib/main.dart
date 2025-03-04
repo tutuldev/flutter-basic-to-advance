@@ -28,18 +28,39 @@ class MyHomePage extends StatelessWidget {
         title: Text('Facebook'),
         centerTitle: true,
       ),
-      body:  ListView.builder(
-        scrollDirection: Axis.vertical,
-        // scrollDirection: Axis.horizontal,
-        itemCount: 50,
-        itemBuilder: (BuildContext context , int index){
-           return Container(
-             margin: EdgeInsets.all(12),
-             height: 100,
-             color: Colors.amber,
-             child: Center(child: Text("$index",style: TextStyle(fontSize: 18),),),
-           );
-        },
+      body:  GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        // childAspectRatio: 1.5
+        // childAspectRatio: 1/2
+        childAspectRatio: 3/2,
+          mainAxisSpacing: 4,
+          crossAxisSpacing: 12
+      ),
+        children: [
+          Container(
+          margin: EdgeInsets.all(12),
+          height: 100,
+          color: Colors.amber,
+          child: Center(child: Text("Hellow",style: TextStyle(fontSize: 30),),),
+         ),
+          Container(
+          margin: EdgeInsets.all(12),
+          height: 100,
+          color: Colors.amber,
+          child: Center(child: Text("Hi",style: TextStyle(fontSize: 30),),),
+         ),
+          Container(
+          margin: EdgeInsets.all(12),
+          height: 100,
+          color: Colors.amber,
+          child: Center(child: Text("Yes",style: TextStyle(fontSize: 30),),),
+         ), Container(
+          margin: EdgeInsets.all(12),
+          height: 100,
+          color: Colors.amber,
+          child: Center(child: Text("Now",style: TextStyle(fontSize: 30),),),
+         ),
+        ],
       )
     );
   }
