@@ -28,39 +28,25 @@ class MyHomePage extends StatelessWidget {
         title: Text('Facebook'),
         centerTitle: true,
       ),
-      body:  GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
+      body:  GridView.builder(
+        padding:const  EdgeInsets.all(8),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
         // childAspectRatio: 1.5
         // childAspectRatio: 1/2
         childAspectRatio: 3/2,
-          mainAxisSpacing: 4,
-          crossAxisSpacing: 12
+          mainAxisSpacing: 8,
+          crossAxisSpacing: 8
       ),
-        children: [
-          Container(
-          margin: EdgeInsets.all(12),
-          height: 100,
-          color: Colors.amber,
-          child: Center(child: Text("Hellow",style: TextStyle(fontSize: 30),),),
-         ),
-          Container(
-          margin: EdgeInsets.all(12),
-          height: 100,
-          color: Colors.amber,
-          child: Center(child: Text("Hi",style: TextStyle(fontSize: 30),),),
-         ),
-          Container(
-          margin: EdgeInsets.all(12),
-          height: 100,
-          color: Colors.amber,
-          child: Center(child: Text("Yes",style: TextStyle(fontSize: 30),),),
-         ), Container(
-          margin: EdgeInsets.all(12),
-          height: 100,
-          color: Colors.amber,
-          child: Center(child: Text("Now",style: TextStyle(fontSize: 30),),),
-         ),
-        ],
+        itemCount: 12,
+        itemBuilder: (context,index){
+          return Container(
+            // margin: const EdgeInsets.all(4),
+            // height: 100, //height auto nibe rastio onujayi
+            color: Colors.amber,
+            child: Center(child: Text(index.toString(),style: TextStyle(fontSize: 30),),),
+          );
+        },
       )
     );
   }
