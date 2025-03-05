@@ -22,57 +22,69 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      // backgroundColor: Colors.amber,
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        // leading: Icon(Icons.arrow_back),
-        leading: Icon(Icons.menu),
-        title: Text('Facebook'),
-        centerTitle: true,
-
-        actions:const <Widget> [
-          Icon(Icons.settings),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12),
-            child: Icon(Icons.notifications),
-          )
-        ],
-        elevation: 0, //for shado 
-
+    return  DefaultTabController(
+      length: 3,
+      initialIndex: 1,
+      child: Scaffold(
+        // backgroundColor: Colors.amber,
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          // leading: Icon(Icons.arrow_back),
+          leading: Icon(Icons.menu),
+          title: Text('Facebook'),
+          centerTitle: true,
+      
+          actions:const <Widget> [
+            Icon(Icons.settings),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12),
+              child: Icon(Icons.notifications),
+            )
+          ],
+          elevation: 0, //for shado 
+          bottom: const TabBar(tabs: [
+            Tab(
+              icon: Icon(Icons.cloud_outlined),
+            ), Tab(
+              icon: Icon(Icons.beach_access_sharp),
+            ), Tab(
+              icon: Icon(Icons.brightness_5_sharp),
+            ),
+          ]),
+        ),
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        body:  GridView.builder(
+          padding:const  EdgeInsets.all(8),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          // childAspectRatio: 1.5
+          // childAspectRatio: 1/2
+          childAspectRatio: 3/2,
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 8
+        ),
+          itemCount: 12,
+          itemBuilder: (context,index){
+            return Container(
+              // margin: const EdgeInsets.all(4),
+              // height: 100, //height auto nibe rastio onujayi
+              color: Colors.amber,
+              child: Center(child: Image.asset('images/1img.jpg'),),
+            );
+          },
+        )
       ),
-
-
-
-
-
-
-
-
-
-
-
-
-      body:  GridView.builder(
-        padding:const  EdgeInsets.all(8),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        // childAspectRatio: 1.5
-        // childAspectRatio: 1/2
-        childAspectRatio: 3/2,
-          mainAxisSpacing: 8,
-          crossAxisSpacing: 8
-      ),
-        itemCount: 12,
-        itemBuilder: (context,index){
-          return Container(
-            // margin: const EdgeInsets.all(4),
-            // height: 100, //height auto nibe rastio onujayi
-            color: Colors.amber,
-            child: Center(child: Image.asset('images/1img.jpg'),),
-          );
-        },
-      )
     );
   }
 }
