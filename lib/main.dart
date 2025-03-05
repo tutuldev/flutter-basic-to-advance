@@ -26,10 +26,33 @@ class MyHomePage extends StatelessWidget {
       // backgroundColor: Colors.amber,
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        leading: Icon(Icons.arrow_back),
+        // leading: Icon(Icons.arrow_back),
+        leading: Icon(Icons.menu),
         title: Text('Facebook'),
         centerTitle: true,
+
+        actions:const <Widget> [
+          Icon(Icons.settings),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12),
+            child: Icon(Icons.notifications),
+          )
+        ],
+        elevation: 0, //for shado 
+
       ),
+
+
+
+
+
+
+
+
+
+
+
+
       body:  GridView.builder(
         padding:const  EdgeInsets.all(8),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
