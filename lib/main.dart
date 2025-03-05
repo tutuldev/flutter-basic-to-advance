@@ -33,7 +33,7 @@ class MyHomePage extends StatelessWidget {
           leading: Icon(Icons.menu),
           title: Text('Facebook'),
           centerTitle: true,
-      
+
           actions:const <Widget> [
             Icon(Icons.settings),
             Padding(
@@ -52,38 +52,18 @@ class MyHomePage extends StatelessWidget {
             ),
           ]),
         ),
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-        body:  GridView.builder(
-          padding:const  EdgeInsets.all(8),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          // childAspectRatio: 1.5
-          // childAspectRatio: 1/2
-          childAspectRatio: 3/2,
-            mainAxisSpacing: 8,
-            crossAxisSpacing: 8
+
+        body: const TabBarView(
+          children: <Widget> [
+            Center(
+              child: Text("It's  cloudy here", style: TextStyle(fontSize: 20),),
+            ),   Center(
+              child: Text("It's  rainy here", style: TextStyle(fontSize: 20),),
+            ),   Center(
+              child: Text("It's  sunny here", style: TextStyle(fontSize: 20),),
+            ),
+          ],
         ),
-          itemCount: 12,
-          itemBuilder: (context,index){
-            return Container(
-              // margin: const EdgeInsets.all(4),
-              // height: 100, //height auto nibe rastio onujayi
-              color: Colors.amber,
-              child: Center(child: Image.asset('images/1img.jpg'),),
-            );
-          },
-        )
       ),
     );
   }
