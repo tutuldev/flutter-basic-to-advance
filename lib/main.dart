@@ -44,7 +44,7 @@ class MyHomePage extends StatelessWidget {
             // margin: const EdgeInsets.all(4),
             // height: 100, //height auto nibe rastio onujayi
             color: Colors.amber,
-            child: Center(child: Image.network('https://picsum.photos/200/300'),),
+            child: Center(child: Image.asset('images/1img.jpg'),),
           );
         },
       )
