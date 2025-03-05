@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget{
     // throw UnimplementedError();
     // return Center(child: Text("Hellow World",textDirection: TextDirection.ltr,));
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme : ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -25,6 +26,7 @@ class MyHomePage extends StatelessWidget {
       // backgroundColor: Colors.amber,
       appBar: AppBar(
         backgroundColor: Colors.blue,
+        leading: Icon(Icons.arrow_back),
         title: Text('Facebook'),
         centerTitle: true,
       ),
